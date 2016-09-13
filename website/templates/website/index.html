@@ -1,0 +1,35 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stoyan Staynov</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {#    TODO remove these two cache lines when deploying  #}
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+
+    <!-- css included -->
+    <link rel="stylesheet" href="{% static "animations/css/normalize.mind41d.css" %}">
+    <link rel="stylesheet" href="{% static "animations/css/base.css" %}">
+{#    <link rel="stylesheet" href="{% static "animation/css/base.min.css" %}">#}
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="{% static "animations/js/Detector.js" %}"></script>
+    <script src="{% static "animations/js/main.js" %}"></script>
+    <script src="{% static "animations/js/three.min.js" %}"></script>
+    <script src="{% static "animations/js/Projector.js" %}"></script>
+    <script src="{% static "animations/js/OrbitControls.js" %}"></script>
+    <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+    <main class="c-main-content">
+        Django is set up & working motherf*ckers!!
+    </main>
+
+
+</body>
+</html>
