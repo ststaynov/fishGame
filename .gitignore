@@ -92,6 +92,4 @@ fish_env/
 node_modules/
 /node_modules/
 fish_env/#
-/fish_env 
-
-node_modules/*
+/fish_env
