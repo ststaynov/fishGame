@@ -8,3 +8,6 @@ def http_consumer(message):
     # Encode that response into message format (ASGI)
     for chunk in AsgiHandler.encode_response(response):
         message.reply_channel.send(chunk)
+
+
+#Finish tutorial at  http://channels.readthedocs.io/en/latest/getting-started.html

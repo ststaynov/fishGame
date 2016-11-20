@@ -2,10 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92848297-982a-4dc9-a784-3b16ad50cded" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/consumers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/routing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/asgi.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/auth.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/binding/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/binding/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/binding/websockets.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/channel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/exceptions.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/generic/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/generic/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/generic/websockets.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/hacks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/handler.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/log.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/management/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/management/commands/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/management/commands/runserver.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/management/commands/runworker.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/message.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/routing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/sessions.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/signals.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/staticfiles.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/tests/a_file" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/tests/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/tests/http.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/tests/settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/tests/test_binding.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/tests/test_generic.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/tests/test_handler.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/tests/test_management.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/tests/test_request.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/tests/test_routing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/tests/test_sessions.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/tests/test_worker.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/channels/worker.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fishGame/settings.py" afterPath="$PROJECT_DIR$/fishGame/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/consumers.py" afterPath="$PROJECT_DIR$/website/consumers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/routing.py" afterPath="$PROJECT_DIR$/website/routing.py" />
     </list>
     <ignored path="fishGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,11 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fishGame/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.81454545">
-              <caret line="113" column="18" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="18" />
+            <state vertical-scroll-proportion="-8.0">
+              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -43,8 +82,8 @@
       <file leaf-file-name="routing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/routing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.148148">
-              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            <state vertical-scroll-proportion="-1.8888888">
+              <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -110,11 +149,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="consumers.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="consumers.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website/consumers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.8888888">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3523316">
+              <caret line="12" column="81" selection-start-line="12" selection-start-column="81" selection-end-line="12" selection-end-column="81" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -157,10 +196,11 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/website/templates/website/index.html" />
-        <option value="$PROJECT_DIR$/website/consumers.py" />
         <option value="$PROJECT_DIR$/channels/routing.py" />
         <option value="$PROJECT_DIR$/fishGame/routing.py" />
         <option value="$PROJECT_DIR$/fishGame/settings.py" />
+        <option value="$PROJECT_DIR$/website/routing.py" />
+        <option value="$PROJECT_DIR$/website/consumers.py" />
       </list>
     </option>
   </component>
@@ -546,7 +586,13 @@
       <option name="project" value="LOCAL" />
       <updated>1479653819775</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added websockets routing">
+      <created>1479654756863</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1479654756863</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -590,7 +636,8 @@
     <MESSAGE value="HEROKU deployment" />
     <MESSAGE value="stuff" />
     <MESSAGE value="channels added to Django" />
-    <option name="LAST_COMMIT_MESSAGE" value="channels added to Django" />
+    <MESSAGE value="added websockets routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="added websockets routing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -962,39 +1009,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/consumers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8888888">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/channels/routing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8238342">
           <caret line="263" column="17" selection-start-line="263" selection-start-column="17" selection-end-line="263" selection-end-column="17" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/routing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.148148">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fishGame/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81454545">
-          <caret line="113" column="18" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="18" />
+        <state vertical-scroll-proportion="-8.0">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/routing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8888888">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/consumers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3523316">
+          <caret line="12" column="81" selection-start-line="12" selection-start-column="81" selection-end-line="12" selection-end-column="81" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
