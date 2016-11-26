@@ -4,3 +4,87 @@
 htmlcov/
 staticfiles/
 venv/
+
+DistributedLock==1.2
+Django==1.8.11
+beautifulsoup4==4.4.1
+django-annoying==0.8.7
+django-bootstrap3==7.0.0
+django-jsonview==0.4.3
+django-m2m-history==0.3.5
+django-oauth-tokens==0.6.3
+django-picklefield==0.3.2
+django-taggit==0.18.0
+oauthlib==1.0.3
+requests==2.9.1
+requests-oauthlib==0.6.1
+simplejson==3.8.2
+six==1.10.0
+swapper==0.1.1
+tweepy==3.5.0
+twitter-monitor==0.3.0
+
+
+dj-database-url==0.4.1
+gunicorn==19.4.5
+whitenoise==3.0
+psycopg2==2.5.4
+
+
+#requirements gotten from:
+asgi_redis==0.13.1
+asgi_ipc==1.1.0
+asgiref==0.13.3
+autobahn==0.14.1
+channels==0.14.2
+daphne==0.13.1
+docutils==0.12
+msgpack-python==0.4.7
+redis==2.10.5
+statistics==1.0.3.5
+Twisted==16.2.0
+txaio==2.5.1
+zope.interface==4.2.0
+
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+
+# Sensitive or high-churn files:
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+# Gradle:
+.idea/gradle.xml
+.idea/libraries
+
+# Mongo Explorer plugin:
+.idea/mongoSettings.xml
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
