@@ -1,0 +1,34 @@
+{
+  "name": "fishgame",
+  "version": "1.0.0",
+  "description": "A web-based game which is played using your mobile phone as a joystick.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-cssmin": "^0.1.7",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ststaynov/fishGame.git"
+  },
+  "author": "Stoyan Staynov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ststaynov/fishGame/issues"
+  },
+  "homepage": "https://github.com/ststaynov/fishGame#readme"
+}

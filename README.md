@@ -20,6 +20,20 @@ Then, to run:
 - Or, to run locally with `runserver`, set `DATABASE_URL` and `REDIS_URL` in your environ, then run `python manage.py runserver`.
 - Or, to run locally with multiple proceses by setting the environ, then running the two commands (`daphne` and `runworker`) as shown in the `Procfile`.
 
-## Running with Docker
+## Using gulp for the frontend
 
-Tomas Tomecek put together a [Dockerized version of this app](https://github.com/TomasTomecek/open-house-2016-demo).
+- Make sure you have installed Node.js on your computer
+- $npm install
+    This should install:
+        "gulp-notify": "^2.2.0",
+        "gulp-plumber": "^1.1.0",
+        "gulp-sass": "^2.3.2",
+        "gulp-cssmin": "^0.1.7",
+        "gulp": "^3.9.1",
+        "gulp-rename": "^1.2.2",
+        "gulp-uglify": "^2.0.0",
+        "gulp-util": "^3.0.7"
+
+- Now you can run:
+        $npm run gulp
+- Feel free to modify the .SCSS files
