@@ -5,8 +5,14 @@ from django.shortcuts import render, redirect
 import haikunator
 from .models import Room
 
+
 def about(request):
     return render(request, "chat/about.html")
+
+
+def ex_accelerometer(request):
+    return render(request, "ex-accelerometer.html")
+
 
 def new_room(request):
     """
