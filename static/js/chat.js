@@ -8,9 +8,8 @@ $(function () {
         var chat = $("#e-scrolling-data-container");
         var ele = $('#e-scrolling-data-container');
 
-        //ele.append(
-        //    $("<td></td>").text(data.timestamp)
-        //)
+        Fish(data);
+
         ele.prepend(
             $("<span></span>").text(data.handle)
         );
