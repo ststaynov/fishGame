@@ -43,6 +43,8 @@
     <script type="text/javascript" src='{% static "js/chat.js" %}'></script>
         <script>
         jQuery('#qrcode').qrcode({
+            width: 164,
+            height: 164,
             text: 'http://queenfish.herokuapp.com/{{ room.label }}'
         });
     </script>
