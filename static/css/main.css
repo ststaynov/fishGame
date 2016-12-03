@@ -17,14 +17,13 @@ body {
 
 /* Chat Specific */
 #chat {
-  margin-top: 50px; }
+  margin-top: 5px; }
 
 #e-scrolling-data-container {
   width: 200px;
   height: 200px;
   overflow-x: hidden;
-  overflow-y: visible;
-  display: inline-block; }
+  overflow-y: visible; }
 
 .c-menu {
   position: relative; }
