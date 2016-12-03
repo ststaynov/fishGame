@@ -3,8 +3,8 @@
  */
 function Fish(data) {
 
-    //this.player = data.handle;
-    //this.position = data.message;
+    this.player = data.handle;
+    this.position = data.message;
     //
     //console.log(data);
     //this.getInfo = function () {
