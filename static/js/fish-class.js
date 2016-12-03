@@ -39,6 +39,7 @@ function init(){
     setInterval(function () {
         vy = vy + -(init.ay);
         vx = vx + init.ax;
+        console.log("ay" + init.ay + "ax" + init.ax);
 
         var ball = document.getElementById("ball");
         y = parseInt(y + vy * vMultiplier);
