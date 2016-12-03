@@ -3,13 +3,13 @@
  */
 function Fish(data) {
 
-    this.player = data.handle;
-    this.position = data.message;
-
-    console.log(data);
-    this.getInfo = function () {
-        return this.color + ' ' + this.type + ' apple';
-    };
+    //this.player = data.handle;
+    //this.position = data.message;
+    //
+    //console.log(data);
+    //this.getInfo = function () {
+    //    return this.color + ' ' + this.type + ' apple';
+    //};
 
     // Position Variables
     var x = 0;
@@ -26,11 +26,12 @@ function Fish(data) {
     var delay = 10;
     var vMultiplier = 0.01;
 
-
-    window.ondevicemotion = function (event) {
-        ax = event.accelerationIncludingGravity.x;
-        ay = event.accelerationIncludingGravity.y;
-        console.log("Accelerometer data - x: " + event.accelerationIncludingGravity.x + " y: " + event.accelerationIncludingGravity.y + " z: " + event.accelerationIncludingGravity.z);
+//TODO make ax and ayget the value from position(data.message)
+//var streetaddress= addy.substr(0, addy.indexOf(','));
+//    window.ondevicemotion = function (event) {
+        ax = this.position.substr(0, this.position.indexOf('y'));
+        ay = this.position.substr(val.indexOf("y") + 1);
+        //console.log("Accelerometer data - x: " + event.accelerationIncludingGravity.x + " y: " + event.accelerationIncludingGravity.y + " z: " + event.accelerationIncludingGravity.z);
 
 
         setInterval(function () {
@@ -61,5 +62,5 @@ function Fish(data) {
             ball.style.top = y + "px";
             ball.style.left = x + "px";
         }, delay);
-    }
+    //}
 }

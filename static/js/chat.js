@@ -42,16 +42,16 @@ $(function () {
 
     function handleOrientation(event) {
 
-        var x = event.beta;  // In degree in the range [-180,180]
-        var y = event.gamma; // In degree in the range [-90,90]
-        x = ('' + x)[0];
-        y = ('' + y)[0];
+        var x = event.accelerationIncludingGravity.x;  // In degree in the range [-180,180]
+        var y = event.accelerationIncludingGravity.y; // In degree in the range [-90,90]
+        //x = ('' + x)[0];
+        //y = ('' + y)[0];
 
         console.log("Fire");
 
         var message = {
             handle: "Stoyan",
-            message: "X:" + x + "Y:" + y
+            message: x + "y" + y
         };
 
         chatsock.send(JSON.stringify(message));
