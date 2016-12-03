@@ -15,8 +15,39 @@ body {
 #e-welcome-heading {
   margin-top: 20%; }
 
+/* Chat Specific */
+#chat {
+  margin-top: 50px; }
+
 #e-scrolling-data-container {
   width: 200px;
   height: 200px;
   overflow-x: hidden;
-  overflow-y: visible; }
+  overflow-y: visible;
+  display: inline-block; }
+
+.c-menu {
+  position: relative; }
+
+.e-burger-menu {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  right: 25px;
+  top: 25px;
+  background-color: #ff0f09;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer; }
+
+#ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  -webkit-radius: 10px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* /Chat Specific */

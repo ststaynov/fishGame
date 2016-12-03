@@ -1,9 +1,9 @@
-$(function() {
+$(function () {
     // When we're using HTTPS, use WSS too.
     var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
     var chatsock = new ReconnectingWebSocket(ws_scheme + '://' + window.location.host + "/chat" + window.location.pathname);
-    
-    chatsock.onmessage = function(message) {
+
+    chatsock.onmessage = function (message) {
         var data = JSON.parse(message.data);
         var chat = $("#e-scrolling-data-container");
         var ele = $('#e-scrolling-data-container');
@@ -20,11 +20,11 @@ $(function() {
         ele.prepend(
             $("<br>")
         );
-        
+
         chat.append(ele)
     };
 
-    $("#chatform").on("submit", function(event) {
+    $("#chatform").on("submit", function (event) {
         var message = {
             handle: $('#handle').val(),
             message: $('#message').val(),
@@ -35,9 +35,9 @@ $(function() {
     });
 
     // Send data to WSS every time deviceorientation is changed
-    setTimeout(function() {
-        window.addEventListener('deviceorientation', $.throttle( 250, handleOrientation ));
-        window.addEventListener('resize', $.throttle( 250, handleOrientation ));
+    setTimeout(function () {
+        window.addEventListener('deviceorientation', $.throttle(250, handleOrientation));
+        window.addEventListener('resize', $.throttle(250, handleOrientation));
     }, 3000);
 
 
@@ -59,4 +59,9 @@ $(function() {
         $("#message").val('').focus();
         return false;
     }
+
+    $(".e-burger-menu").click(function () {
+        //console.log()
+        $(".c-menu").toggleClass("hidden");
+    });
 });
