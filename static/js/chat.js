@@ -37,6 +37,7 @@ $(function() {
     // Send data to WSS every time deviceorientation is changed
     setTimeout(function() {
         window.addEventListener('deviceorientation', $.debounce( 250, handleOrientation ));
+        window.addEventListener('resize', $.debounce( 250, handleOrientation ));
     }, 3000);
 
 
