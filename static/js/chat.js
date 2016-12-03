@@ -11,13 +11,13 @@ $(function() {
         //ele.append(
         //    $("<td></td>").text(data.timestamp)
         //)
-        ele.append(
+        ele.prepend(
             $("<span></span>").text(data.handle)
         );
-        ele.append(
+        ele.prepend(
             $("<span></span>").text(data.message)
         );
-        ele.append(
+        ele.prepend(
             $("<br>")
         );
         
