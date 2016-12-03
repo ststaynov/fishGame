@@ -41,11 +41,13 @@ $(function() {
 
         var x = event.beta;  // In degree in the range [-180,180]
         var y = event.gamma; // In degree in the range [-90,90]
+        x = ('' + x)[0];
+        y = ('' + y)[0];
 
         console.log("Fire");
 
         var message = {
-            handle: "Someone",
+            handle: "Stoyan",
             message: "X:" + x + "Y:" + y,
         }
         chatsock.send(JSON.stringify(message));

@@ -10,7 +10,7 @@ body {
 
 .quiet {
   position: fixed;
-  bottom:10px;
+  bottom: 10px;
 }
 
 .container {
@@ -19,4 +19,11 @@ body {
 
 #e-welcome-heading {
   margin-top: 20%;
+}
+
+#e-scrolling-data-container {
+  width: 200px;
+  height: 200px;
+  overflow-x: hidden;
+  overflow-y: visible;
 }

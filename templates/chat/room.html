@@ -17,11 +17,12 @@
         <table id="chat">
             <tbody>
             {% for message in messages %}
-                <tr>
-                    <td>{{ message.formatted_timestamp }}</td>
-                    <td>{{ message.handle }}</td>
-                    <td>{{ message.message }}</td>
-                </tr>
+                <div id="e-scrolling-data-container">
+{#                    <td>{{ message.formatted_timestamp }}</td>#}
+                    <span>{{ message.handle }}</span>
+                    <br>
+                    <span>{{ message.message }}</span>
+                </div>
             {% endfor %}
             </tbody>
             <tfoot>
