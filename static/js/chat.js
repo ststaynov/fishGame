@@ -56,7 +56,7 @@ $(function () {
         };
 
         chatsock.send(JSON.stringify(message));
-        $("#message").val('').focus();
+        //$("#message").val('').focus();
         return false;
     }
 
