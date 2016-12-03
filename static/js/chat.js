@@ -8,7 +8,7 @@ $(function () {
         var chat = $("#e-scrolling-data-container");
         var ele = $('#e-scrolling-data-container');
 
-        moveFish(data);
+        init.moveFish(data);
 
         ele.prepend(
             $("<span></span>").text(data.handle)
