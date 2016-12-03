@@ -22,8 +22,8 @@ function init() {
     var vy = 0;
 
     // Acceleration
-    init.ax = 0;
-    init.ay = 0;
+    this.ax = 0;
+    this.ay = 0;
 
     var delay = 10;
     var vMultiplier = 0.01;
@@ -35,14 +35,14 @@ function init() {
 //        ay = this.position.substr(this.position.indexOf("y") + 1);
     //console.log("Accelerometer data - x: " + event.accelerationIncludingGravity.x + " y: " + event.accelerationIncludingGravity.y + " z: " + event.accelerationIncludingGravity.z);
 
-    this.moveFish = moveTheFish;
-
-    function moveTheFish(data) {
-        var position = data.message;
-
-        init.ax = position.substr(0, position.indexOf('y'));
-        init.ay = position.substr(position.indexOf("y") + 1);
-    }
+    //this.moveFish = moveTheFish;
+    //
+    //function moveTheFish(data) {
+    //    var position = data.message;
+    //
+    //    init.ax = position.substr(0, position.indexOf('y'));
+    //    init.ay = position.substr(position.indexOf("y") + 1);
+    //}
 
     setInterval(function () {
         if (!isNaN(init.ay) && !isNaN(init.ax)) {
@@ -78,11 +78,11 @@ function init() {
 }
 
 
-//function moveFish(data) {
-//    this.position = data.message;
-//
-//    init.ax = this.position.substr(0, this.position.indexOf('y'));
-//    init.ay = this.position.substr(this.position.indexOf("y") + 1);
-//}
+function moveFish(data) {
+    this.position = data.message;
+
+    init.ax = this.position.substr(0, this.position.indexOf('y'));
+    init.ay = this.position.substr(this.position.indexOf("y") + 1);
+}
 
 init();
