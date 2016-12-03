@@ -16,15 +16,16 @@
     <form id="chatform">
         <table id="chat">
             <tbody>
-            {% for message in messages %}
                 <div id="e-scrolling-data-container">
-{#                    <td>{{ message.formatted_timestamp }}</td>#}
-                    <span>{{ message.handle }}</span>
-                    <br>
-                    <span>{{ message.message }}</span>
+                    {% for message in messages %}
+                        {#                    <td>{{ message.formatted_timestamp }}</td>#}
+                        <span>{{ message.handle }}</span>
+                        <span>{{ message.message }}</span>
+                        <br>
+                    {% endfor %}
                 </div>
-            {% endfor %}
             </tbody>
+
             <tfoot>
             <tr>
                 <td>Say something:</td>
@@ -42,7 +43,7 @@
     <script type="text/javascript" src='{% static "js/jquery.qrcode.min.js" %}'></script>
     <script type="text/javascript" src='{% static "js/reconnecting-websocket.min.js" %}'></script>
     <script type="text/javascript" src='{% static "js/chat.js" %}'></script>
-        <script>
+    <script>
         jQuery('#qrcode').qrcode({
             width: 164,
             height: 164,

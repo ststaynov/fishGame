@@ -5,17 +5,17 @@ $(function() {
     
     chatsock.onmessage = function(message) {
         var data = JSON.parse(message.data);
-        var chat = $("#chat")
-        var ele = $('<tr></tr>')
+        var chat = $("#e-scrolling-data-container");
+        var ele = $('');
 
+        //ele.append(
+        //    $("<td></td>").text(data.timestamp)
+        //)
         ele.append(
-            $("<td></td>").text(data.timestamp)
+            $("<span></span>").text(data.handle)
         )
         ele.append(
-            $("<td></td>").text(data.handle)
-        )
-        ele.append(
-            $("<td></td>").text(data.message)
+            $("<span></span>").text(data.message)
         )
         
         chat.append(ele)
