@@ -60,7 +60,7 @@ $(function () {
         return false;
     }
 
-    $(".e-burger-menu").bind('touchstart click', function(){
+    $(".e-burger-menu").bind('tap click', function(){
         //console.log()
         $(".c-menu").toggleClass("hidden");
     });
