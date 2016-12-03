@@ -21,15 +21,15 @@ $(function() {
         chat.append(ele)
     };
 
-    //$("#chatform").on("submit", function(event) {
-    //    var message = {
-    //        handle: $('#handle').val(),
-    //        message: $('#message').val(),
-    //    }
-    //    chatsock.send(JSON.stringify(message));
-    //    $("#message").val('').focus();
-    //    return false;
-    //});
+    $("#chatform").on("submit", function(event) {
+        var message = {
+            handle: $('#handle').val(),
+            message: $('#message').val(),
+        }
+        chatsock.send(JSON.stringify(message));
+        $("#message").val('').focus();
+        return false;
+    });
 
     // Send data to WSS every time deviceorientation is changed
     setTimeout(function() {
