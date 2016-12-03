@@ -26,11 +26,11 @@ function Fish(data) {
     var delay = 10;
     var vMultiplier = 0.01;
 
-//TODO make ax and ayget the value from position(data.message)
+//TODO make ax and ay get the value from position(data.message)
 //var streetaddress= addy.substr(0, addy.indexOf(','));
 //    window.ondevicemotion = function (event) {
         ax = this.position.substr(0, this.position.indexOf('y'));
-        ay = this.position.substr(val.indexOf("y") + 1);
+        ay = this.position.substr(this.position.indexOf("y") + 1);
         //console.log("Accelerometer data - x: " + event.accelerationIncludingGravity.x + " y: " + event.accelerationIncludingGravity.y + " z: " + event.accelerationIncludingGravity.z);
 
 
