@@ -1,2 +1,16 @@
 body {
-  background-color: #79aec8; }
+  background-color: #FEFEFE; }
+
+.hidden {
+  display: none;
+  opacity: 0; }
+
+.quiet {
+  position: fixed;
+  bottom: 10px; }
+
+.container {
+  text-align: center; }
+
+#e-welcome-heading {
+  margin-top: 20%; }
