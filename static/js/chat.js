@@ -36,7 +36,7 @@ $(function() {
 
     // Send data to WSS every time deviceorientation is changed
     setTimeout(function() {
-        window.addEventListener('deviceorientation', handleOrientation);
+        window.addEventListener('deviceorientation', $.debounce( 250, handleOrientation ));
     }, 3000);
 
 
@@ -51,8 +51,9 @@ $(function() {
 
         var message = {
             handle: "Stoyan",
-            message: "X:" + x + "Y:" + y,
-        }
+            message: "X:" + x + "Y:" + y
+        };
+
         chatsock.send(JSON.stringify(message));
         $("#message").val('').focus();
         return false;
