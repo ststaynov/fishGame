@@ -1,14 +1,12 @@
 {% extends "base.html" %}
 
 {% block container-ball %}
-        <div id="ball"></div>
+    <div id="ball"></div>
 {% endblock container-ball %}
 
 {% block content %}
     {% load staticfiles %}
 
-
-    <div class="e-burger-menu">X</div>
     <div class="c-menu">
         <h1>{{ room.label }}</h1>
         <div id="qrcode"></div>
@@ -34,15 +32,15 @@
                 {% endfor %}
             </div>
 
-{#            Second container for the 2nd player data#}
+            {#            Second container for the 2nd player data#}
 
-{#            <div id="e-scrolling-data-container">#}
-{#                {% for message in messages %}#}
-{#                    <span>{{ message.handle }}</span>#}
-{#                    <span>{{ message.message }}</span>#}
-{#                    <br>#}
-{#                {% endfor %}#}
-{#            </div>#}
+            {#            <div id="e-scrolling-data-container">#}
+            {#                {% for message in messages %}#}
+            {#                    <span>{{ message.handle }}</span>#}
+            {#                    <span>{{ message.message }}</span>#}
+            {#                    <br>#}
+            {#                {% endfor %}#}
+            {#            </div>#}
 
             </tbody>
 
@@ -56,6 +54,11 @@
             </tfoot>
         </table>
     </form>
+
+    <div class="c-mobile-overlay hidden">
+        <span class="c-mobile-text">Your fish color is: </span>
+    </div>
+    <div class="e-burger-menu">X</div>
 {% endblock content %}
 
 {% block afterbody %}

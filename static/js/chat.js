@@ -61,6 +61,7 @@ $(function () {
 
     $(".e-burger-menu").bind('tap click', function(){
         //console.log()
-        $(".c-menu").toggleClass("hidden");
+        // $(".c-menu").toggleClass("hidden");
+        $(".c-mobile-overlay").toggleClass("hidden");
     });
 });

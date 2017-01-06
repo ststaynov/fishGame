@@ -45,8 +45,8 @@ function init() {
                 x = windowWidth - 128;
                 vx = 0;
             }
-            if (y > windowHeight - 128) {
-                y = windowHeight - 128;
+            if (y > windowHeight - 64) {
+                y = windowHeight - 64;
                 vy = 0;
             }
 
