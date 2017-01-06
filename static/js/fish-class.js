@@ -25,11 +25,12 @@ function init() {
     this.ax = 0;
     this.ay = 0;
 
-    var delay = 10;
+    var delay = 20;
     var vMultiplier = 0.01;
 
 //TODO Figure out why ball moving on the x-axis is not working
-
+    var windowWidth = window.innerWidth,
+        windowHeight = window.innerHeight;
 
     setInterval(function () {
         if (!isNaN(init.ay) && !isNaN(init.ax)) {
@@ -39,7 +40,7 @@ function init() {
 
             var ball = document.getElementById("ball");
             y = parseInt(y + vy * vMultiplier);
-            x = window.innerWidth - parseInt(x + vx * vMultiplier);
+            x = parseInt(x + vx * vMultiplier);
 
             console.log("y" + y + "x" + x);
 
@@ -51,12 +52,12 @@ function init() {
                 y = 0;
                 vy = 0;
             }
-            if (x > window.innerWidth - 20) {
-                x = window.innerWidth - 20;
+            if (x > windowWidth - 20) {
+                x = windowWidth - 20;
                 vx = 0;
             }
-            if (y > window.innerHeight - 20) {
-                y = window.innerHeight - 20;
+            if (y > windowHeight - 20) {
+                y = windowHeight - 20;
                 vy = 0;
             }
 
