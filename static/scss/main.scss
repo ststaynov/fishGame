@@ -55,14 +55,12 @@ body {
 }
 
 #ball {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  -webkit-radius: 10px;
-  background-color: red;
+  width: 128px;
+  height: 128px;
   position: absolute;
   top: 0;
   left: 0;
+  background-image: url(../images/fish.png);
 }
 
 /* /Chat Specific */

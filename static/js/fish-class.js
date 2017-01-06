@@ -50,7 +50,6 @@ function init() {
                 vy = 0;
             }
 
-            y = windowHeight - y;
             ball.style.transform = "translate(" + x + "px," + y + "px)";
         }
     }, delay);
