@@ -4,15 +4,6 @@
 
 function init() {
 
-
-    //this.player = data.handle;
-    //this.position = data.message;
-    //
-    //console.log(data);
-    //this.getInfo = function () {
-    //    return this.color + ' ' + this.type + ' apple';
-    //};
-
     // Position Variables
     var x = 0;
     var y = 0;
@@ -25,24 +16,22 @@ function init() {
     this.ax = 0;
     this.ay = 0;
 
-    var delay = 20;
+    var delay = 15;
     var vMultiplier = 0.01;
 
 //TODO Figure out why ball moving on the x-axis is not working
     var windowWidth = window.innerWidth,
         windowHeight = window.innerHeight;
 
+     var ball = document.getElementById("ball");
+
     setInterval(function () {
         if (!isNaN(init.ay) && !isNaN(init.ax)) {
             vy = vy + -(init.ay);
             vx = vx + -init.ax;
-            // console.log("ay" + init.ay + "ax" + init.ax);
 
-            var ball = document.getElementById("ball");
             y = parseInt(y + vy * vMultiplier);
             x = parseInt(x + vx * vMultiplier);
-
-            console.log("y" + y + "x" + x);
 
             if (x < 0) {
                 x = 0;
@@ -61,8 +50,8 @@ function init() {
                 vy = 0;
             }
 
+            y = windowHeight - y;
             ball.style.transform = "translate(" + x + "px," + y + "px)";
-            // ball.style.transform = "translateX(" + x + "px)";
         }
     }, delay);
 }
