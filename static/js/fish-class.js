@@ -52,6 +52,7 @@ function init() {
             if (x > window.innerWidth - 20) {
                 x = window.innerWidth - 20;
                 vx = 0;
+                console.log("x: " + x);
             }
             if (y > window.innerHeight - 20) {
                 y = window.innerHeight - 20;
@@ -67,7 +68,6 @@ function init() {
 
 function moveFish(data) {
     this.position = data.message;
-    console.log("position: " + this.position);
 
     init.ax = this.position.substr(0, this.position.indexOf('y'));
     init.ay = this.position.substr(this.position.indexOf("y") + 1);
