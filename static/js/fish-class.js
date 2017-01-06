@@ -35,11 +35,12 @@ function init() {
         if (!isNaN(init.ay) && !isNaN(init.ax)) {
             vy = vy + -(init.ay);
             vx = vx + init.ax;
-            console.log("ay" + init.ay + "ax" + init.ax);
+            // console.log("ay" + init.ay + "ax" + init.ax);
 
             var ball = document.getElementById("ball");
             y = parseInt(y + vy * vMultiplier);
             x = parseInt(x + vx * vMultiplier);
+            console.log("y" + y + "x" + x);
 
             if (x < 0) {
                 x = 0;
@@ -52,7 +53,6 @@ function init() {
             if (x > window.innerWidth - 20) {
                 x = window.innerWidth - 20;
                 vx = 0;
-                console.log("x: " + x);
             }
             if (y > window.innerHeight - 20) {
                 y = window.innerHeight - 20;
