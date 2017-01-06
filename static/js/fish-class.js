@@ -67,6 +67,7 @@ function init() {
 
 function moveFish(data) {
     this.position = data.message;
+    console.log("position: " + this.position);
 
     init.ax = this.position.substr(0, this.position.indexOf('y'));
     init.ay = this.position.substr(this.position.indexOf("y") + 1);
