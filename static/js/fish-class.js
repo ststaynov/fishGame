@@ -41,12 +41,12 @@ function init() {
                 y = 0;
                 vy = 0;
             }
-            if (x > windowWidth - 20) {
-                x = windowWidth - 20;
+            if (x > windowWidth - 128) {
+                x = windowWidth - 128;
                 vx = 0;
             }
-            if (y > windowHeight - 20) {
-                y = windowHeight - 20;
+            if (y > windowHeight - 128) {
+                y = windowHeight - 128;
                 vy = 0;
             }
 
