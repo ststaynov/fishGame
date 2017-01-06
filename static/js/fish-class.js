@@ -59,8 +59,8 @@ function init() {
                 vy = 0;
             }
 
-            ball.style.top = y + "px";
-            ball.style.left = x + "px";
+            ball.style.transform = "translateY(" + y + "px)";
+            ball.style.transform = "translateX(" + x + "px)";
         }
     }, delay);
 }
