@@ -34,7 +34,7 @@ function init() {
     setInterval(function () {
         if (!isNaN(init.ay) && !isNaN(init.ax)) {
             vy = vy + -(init.ay);
-            vx = vx + init.ax;
+            vx = vx + -init.ax;
             // console.log("ay" + init.ay + "ax" + init.ax);
 
             var ball = document.getElementById("ball");
