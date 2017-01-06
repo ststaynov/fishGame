@@ -39,8 +39,8 @@ function init() {
 
             var ball = document.getElementById("ball");
             y = parseInt(y + vy * vMultiplier);
-            x = parseInt(x + vx * vMultiplier);
-            x = window.innerWidth - x;
+            x = window.innerWidth - parseInt(x + vx * vMultiplier);
+
             console.log("y" + y + "x" + x);
 
             if (x < 0) {
