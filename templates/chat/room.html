@@ -15,7 +15,7 @@
             Anyone with this URL can join the room and chat:
             <code>{{ request.scheme }}://{{ request.get_host }}/{{ room.label }}</code>
         </p>
-        <p>
+        <p class="hidden">
             <label for="handle">Your name:</label>
             <input id="handle" type="text" placeholder="handle">
         </p>
@@ -44,7 +44,7 @@
 
             </tbody>
 
-            <tfoot>
+            <tfoot style="display: none;">
             <tr>
                 <td>Say something:</td>
                 <td colspan=2>
@@ -58,7 +58,7 @@
     <div class="c-score-overlay">
 
 
-        <a href="www.queenfish.herokuapp.com"><i class="e-icon-replay material-icons">&#xE863;</i></a>
+        <a href=http://www.queenfish.herokuapp.com"><i class="e-icon-replay material-icons">&#xE863;</i></a>
 
         <div class="e-board">
             <h2> Scoreboard</h2>
@@ -73,7 +73,8 @@
     </div>
 
     <div class="c-mobile-overlay hidden">
-        <span class="c-mobile-text">Your fish color is: </span>
+        <span class="e-mobile-text">Your fish color is: </span>
+        <div class="e-fish-color"></div>
     </div>
     <div class="e-burger-menu">X</div>
 {% endblock content %}

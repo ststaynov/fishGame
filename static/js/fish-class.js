@@ -31,6 +31,8 @@ function init() {
 
     setInterval(function () {
         if (!isNaN(init.ay) && !isNaN(init.ax)) {
+            console.log("Working now");
+            
             vy = vy + -(init.ay);
             vx = vx + -init.ax;
 
@@ -45,12 +47,12 @@ function init() {
                 y = 0;
                 vy = 0;
             }
-            if (x > windowWidth - 128) {
-                x = windowWidth - 128;
+            if (x > windowWidth - 79) {
+                x = windowWidth - 79;
                 vx = 0;
             }
-            if (y > windowHeight - 64) {
-                y = windowHeight - 64;
+            if (y > windowHeight - 63) {
+                y = windowHeight - 63;
                 vy = 0;
             }
 
