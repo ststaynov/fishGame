@@ -44,7 +44,7 @@ body {
 
 #ball {
   width: 128px;
-  height: 128px;
+  height: 63px;
   position: absolute;
   top: 0;
   left: 0;
