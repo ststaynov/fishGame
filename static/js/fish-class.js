@@ -25,9 +25,6 @@ function init() {
 
     var ball = document.getElementById("ball");
 
-    setTimeout(function () {
-        $(".c-score-overlay").addClass("show");
-    }, 30000)
 
     setInterval(function () {
         if (!isNaN(init.ay) && !isNaN(init.ax)) {

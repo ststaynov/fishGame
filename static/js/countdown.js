@@ -15,7 +15,9 @@ function StartCountdown() {
 
     function anim() {
         addClassDelayed($("#countdown"), "puffer", 600);
-        if (currentNum == 0) currentNum = startNum - 1; else currentNum--;
+        if (currentNum == 0) {
+            $(".c-score-overlay").addClass("show");
+        } else {currentNum--;}
         $('#countdown').html(currentNum + 1);
         $('#countdown').removeClass("puffer");
     }
