@@ -28,10 +28,10 @@ function init() {
 
     setInterval(function () {
         if (!isNaN(init.ay) && !isNaN(init.ax)) {
-            if ($('#ball').hasClass('hidden')) {     // tryout to see if when we load a device the section can get destroyed
+            if ($('#ball').hasClass('invisible')) {     // tryout to see if when we load a device the section can get destroyed
 
                 $(".c-menu").addClass('hidden');
-                $("#ball").removeClass('hidden');
+                $("#ball").removeClass('invisible');
                 StartCountdown();
             }
 

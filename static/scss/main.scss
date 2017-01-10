@@ -8,6 +8,10 @@ body {
   opacity: 0;
 }
 
+.invisible {
+  opacity: 0;
+}
+
 .section {
   margin-top: 4em;
 }
@@ -32,6 +36,10 @@ body {
   margin-top: 5px;
 }
 
+#qrcode {
+  margin-top: 25px;
+}
+
 #e-scrolling-data-container {
   width: 200px;
   height: 200px;
@@ -44,6 +52,7 @@ body {
 }
 
 .e-burger-menu {
+  display: none;
   width: 30px;
   height: 30px;
   position: fixed;
@@ -109,7 +118,7 @@ body {
   bottom: 0;
   left: 0;
   background-color: cadetblue;
-  transition: 1s linear all;
+  transition: 3s linear all;
   z-index: 12;
 
   &.show {

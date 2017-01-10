@@ -6,6 +6,7 @@ function StartCountdown() {
 
     var startNum;
     var currentNum;
+    var refreshIntervalId;
 
     function addClassDelayed(jqObj, c, to) {
         setTimeout(function () {
@@ -16,6 +17,10 @@ function StartCountdown() {
     function anim() {
         addClassDelayed($("#countdown"), "puffer", 600);
         if (currentNum == 0) {
+            clearInterval(refreshIntervalId);
+
+            $("#ball").addClass('invisible');
+            $("#countdown").removeClass('invisible');
             $(".c-score-overlay").addClass("show");
         } else {currentNum--;}
         $('#countdown').html(currentNum + 1);
@@ -26,7 +31,7 @@ function StartCountdown() {
         startNum = 25;
         currentNum = startNum;
         $("#countdown").html(currentNum); // init first time based on n
-        self.setInterval(function () {
+        refreshIntervalId = self.setInterval(function () {
             anim()
         }, 1325);
     });
