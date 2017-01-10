@@ -8,7 +8,7 @@
     {% load staticfiles %}
 
     <div class="c-menu">
-        <h1>{{ room.label }}</h1>
+        <h2>{{ room.label }}</h2>
         <div id="qrcode"></div>
 
         <p class="quiet">
@@ -20,16 +20,16 @@
             <input id="handle" type="text" placeholder="handle">
         </p>
     </div>
-    <form id="chatform">
+    <form id="chatform" style="display: none">
         <table id="chat">
             <tbody>
             <div id="e-scrolling-data-container">
-                {% for message in messages %}
-                    {#                    <td>{{ message.formatted_timestamp }}</td>#}
-                    <span>{{ message.handle }}</span>
-                    <span>{{ message.message }}</span>
-                    <br>
-                {% endfor %}
+{#                {% for message in messages %}#}
+{#                    <td>{{ message.formatted_timestamp }}</td>#}
+{#                    <span>{{ message.handle }}</span>#}
+{#                    <span>{{ message.message }}</span>#}
+{#                    <br>#}
+{#                {% endfor %}#}
             </div>
 
             {#            Second container for the 2nd player data#}
@@ -54,6 +54,8 @@
             </tfoot>
         </table>
     </form>
+
+    <div id="countdown"></div>
 
     <div class="c-score-overlay">
 
@@ -85,6 +87,7 @@
     <script type="text/javascript" src='{% static "js/jquery.qrcode.min.js" %}'></script>
     <script type="text/javascript" src='{% static "js/reconnecting-websocket.min.js" %}'></script>
     <script type="text/javascript" src='{% static "js/chat.js" %}'></script>
+    <script type="text/javascript" src='{% static "js/countdown.js" %}'></script>
     <script>
         jQuery('#qrcode').qrcode({
             width: 164,

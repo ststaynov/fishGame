@@ -62,6 +62,7 @@ body {
   top: 0;
   left: 0;
   background-image: url(../images/fish_small.png);
+  transition: 1s linear all;
 }
 
 /* /Chat Specific */
@@ -150,5 +151,9 @@ body {
       display: block;
       opacity: 1;
     }
+  }
+
+  .c-score-overlay {
+    display: none !important;
   }
 }

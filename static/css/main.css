@@ -49,7 +49,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../images/fish_small.png); }
+  background-image: url(../images/fish_small.png);
+  transition: 1s linear all; }
 
 /* /Chat Specific */
 .c-mobile-overlay {
@@ -117,4 +118,6 @@ body {
 @media all and (max-width: 480px) {
   .c-mobile-overlay.hidden {
     display: block;
-    opacity: 1; } }
+    opacity: 1; }
+  .c-score-overlay {
+    display: none !important; } }
