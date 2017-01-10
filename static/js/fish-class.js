@@ -23,16 +23,18 @@ function init() {
     var windowWidth = window.innerWidth,
         windowHeight = window.innerHeight;
 
-     var ball = document.getElementById("ball");
+    var ball = document.getElementById("ball");
 
-    setTimeout (function () {
-       $(".c-score-overlay").addClass("show");
+    setTimeout(function () {
+        $(".c-score-overlay").addClass("show");
     }, 10000)
 
     setInterval(function () {
         if (!isNaN(init.ay) && !isNaN(init.ax)) {
-            console.log("Working now");
-            
+            if ($('#ball')) {     // tryout to see if when we load a device the section can get destroyed
+                $("#ball").removeClass('hidden');
+            }
+
             vy = vy + -(init.ay);
             vx = vx + -init.ax;
 
