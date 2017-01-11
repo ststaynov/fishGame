@@ -55,6 +55,8 @@ function eatFood(x, y) {
 
         if(y > elementY - 50 && y < elementY + 50 && x > elementX - 50 && x < elementX + 50) {
             console.log("EAT IT MOTHERFUCKER");
+            $(this).remove();
+            placeFood();
         }
     });
 }
