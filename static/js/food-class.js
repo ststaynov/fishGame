@@ -53,10 +53,12 @@ function eatFood(x, y) {
         var elementY = parseInt($(this).css('transform').split(',')[5]);
         var elementX = parseInt($(this).css('transform').split(',')[4]);
 
-        if(y > elementY - 50 && y < elementY + 50 && x > elementX - 50 && x < elementX + 50) {
+        if(y > elementY - 50 && y < elementY && x > elementX  && x < elementX + 50) {
             console.log("EAT IT MOTHERFUCKER");
             $(this).remove();
             placeFood();
+            score++;
+            $('e-personal-score').innerHTML = "Your Score - " + score;
         }
     });
 }
