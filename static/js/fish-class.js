@@ -32,6 +32,7 @@ function init() {
 
                 $(".c-menu").addClass('hidden');
                 $("#ball").removeClass('invisible');
+                $("#c-swimming-pool").removeClass('invisible');
                 StartCountdown();
             }
 
