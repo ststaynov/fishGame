@@ -57,7 +57,7 @@ function init() {
                 y = windowHeight - 63;
                 vy = 0;
             }
-
+            eatFood(x, y);
             ball.style.transform = "translate(" + x + "px," + y + "px)";
         }
     }, delay);

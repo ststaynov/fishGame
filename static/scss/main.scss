@@ -27,7 +27,7 @@ body {
 }
 
 #e-welcome-heading {
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 /* Chat Specific */
@@ -72,6 +72,25 @@ body {
   left: 0;
   background-image: url(../images/fish_small.png);
   transition: 1s linear all;
+}
+
+.food {
+  width: 25px;
+  height: 25px;
+  //background-color: red;
+  position: absolute;
+  background-image: url(../images/worm.png);
+  background-size: contain;
+}
+
+#c-swimming-pool {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
 }
 
 /* /Chat Specific */
