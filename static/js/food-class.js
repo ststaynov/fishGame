@@ -46,13 +46,14 @@ function eatFood(x, y) {
     //         placeFood();
     //     }
     // }
+    console.log("FishX: " + x + " FishY: " + y);
 
     $('.food').each(function(i, obj) {
     //get the x an y values of the element
         var elementY = parseInt($(this).css('transform').split(',')[5]);
         var elementX = parseInt($(this).css('transform').split(',')[4]);
 
-        if(y == elementY && x == elementX) {
+        if(y > elementY - 10 && y < elementY + 10 && x > elementX - 10 && x < elementX + 10) {
             console.log("EAT IT MOTHERFUCKER");
         }
     });
