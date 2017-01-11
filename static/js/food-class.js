@@ -53,7 +53,7 @@ function eatFood(x, y) {
         var elementY = parseInt($(this).css('transform').split(',')[5]);
         var elementX = parseInt($(this).css('transform').split(',')[4]);
 
-        if(y > elementY - 10 && y < elementY + 10 && x > elementX - 10 && x < elementX + 10) {
+        if(y > elementY - 50 && y < elementY + 50 && x > elementX - 50 && x < elementX + 50) {
             console.log("EAT IT MOTHERFUCKER");
         }
     });
