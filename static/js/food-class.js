@@ -57,8 +57,8 @@ function eatFood(x, y) {
             console.log("EAT IT MOTHERFUCKER");
             $(this).remove();
             placeFood();
-            score++;
-            $('#e-personal-score').innerHTML = "Your Score - " + score;
+            score = 1;
+            $('#e-personal-score').html("Your Score - " + score);
         }
     });
 }
