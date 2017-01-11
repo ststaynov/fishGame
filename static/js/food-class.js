@@ -2,7 +2,7 @@
  * Created by Stoyan on 1/11/2017.
  */
 var food = [];
-var score;
+var score = 0;
 var height = (window).innerHeight;
 var width = (window).innerWidth;
 
@@ -58,7 +58,7 @@ function eatFood(x, y) {
             $(this).remove();
             placeFood();
             score++;
-            $('e-personal-score').innerHTML = "Your Score - " + score;
+            $('#e-personal-score').innerHTML = "Your Score - " + score;
         }
     });
 }
