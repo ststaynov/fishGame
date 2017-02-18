@@ -39,3 +39,5 @@ Then, to run:
 - Now you can run:
         $npm run gulp
 - Feel free to modify the .SCSS files
+
+- To reset the database to a previous session do: $heroku pg:backups restore b001 DATABASE_URL --app queenfish

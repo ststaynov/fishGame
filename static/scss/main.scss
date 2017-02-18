@@ -8,6 +8,10 @@ body {
   opacity: 0;
 }
 
+.invisible {
+  opacity: 0;
+}
+
 .section {
   margin-top: 4em;
 }
@@ -19,16 +23,21 @@ body {
 
 .container {
   text-align: center;
+  top: 200px;
 }
 
 #e-welcome-heading {
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 /* Chat Specific */
 
 #chat {
   margin-top: 5px;
+}
+
+#qrcode {
+  margin-top: 25px;
 }
 
 #e-scrolling-data-container {
@@ -43,6 +52,7 @@ body {
 }
 
 .e-burger-menu {
+  display: none;
   width: 30px;
   height: 30px;
   position: fixed;
@@ -55,14 +65,123 @@ body {
 }
 
 #ball {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  -webkit-radius: 10px;
-  background-color: red;
+  width: 79px; // fish is 128
+  height: 63px;
   position: absolute;
   top: 0;
   left: 0;
+  background-image: url(../images/fish_small.png);
+  transition: 1s linear all;
+}
+
+.food {
+  width: 25px;
+  height: 25px;
+  //background-color: red;
+  position: absolute;
+  background-image: url(../images/worm.png);
+  background-size: contain;
+}
+
+#c-swimming-pool {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
 }
 
 /* /Chat Specific */
+
+.c-mobile-overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #222222;
+
+  .e-fish-color {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    position: absolute;
+    top: calc(50% + 25px);
+    left: calc(50% - 13px);
+    background-color: #84bd93;
+  }
+
+  .e-mobile-text {
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 25px);
+    left: 0;
+    font-size: 26px;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+  }
+}
+
+.c-score-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: -100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: cadetblue;
+  transition: 3s linear all;
+  z-index: 12;
+
+  &.show {
+    top: 0;
+  }
+
+  .e-icon-replay {
+    position: absolute;
+    left: calc(50% - 50px);
+    width: 100px;
+    display: inline-block;
+    top: calc(50% + 200px);
+    color: #fff;
+    font-size: 100px;
+  }
+
+  .e-board {
+    position: relative;
+    top: calc(50% - 200px);
+    padding: 20px;
+    display: inline-block;
+    border: 2px solid white;
+  }
+
+  h2 {
+    color: antiquewhite;
+  }
+
+  li {
+    color: #fff;
+    list-style: none;
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .c-mobile-overlay {
+    &.hidden {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  .c-score-overlay {
+    display: none !important;
+  }
+}

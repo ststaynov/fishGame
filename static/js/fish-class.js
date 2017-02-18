@@ -4,15 +4,6 @@
 
 function init() {
 
-
-    //this.player = data.handle;
-    //this.position = data.message;
-    //
-    //console.log(data);
-    //this.getInfo = function () {
-    //    return this.color + ' ' + this.type + ' apple';
-    //};
-
     // Position Variables
     var x = 0;
     var y = 0;
@@ -25,19 +16,29 @@ function init() {
     this.ax = 0;
     this.ay = 0;
 
-    var delay = 10;
+    var delay = 15;
     var vMultiplier = 0.01;
 
 //TODO Figure out why ball moving on the x-axis is not working
+    var windowWidth = window.innerWidth,
+        windowHeight = window.innerHeight;
+
+    var ball = document.getElementById("ball");
 
 
     setInterval(function () {
         if (!isNaN(init.ay) && !isNaN(init.ax)) {
-            vy = vy + -(init.ay);
-            vx = vx + init.ax;
-            console.log("ay" + init.ay + "ax" + init.ax);
+            if ($('#ball').hasClass('invisible')) {     // tryout to see if when we load a device the section can get destroyed
 
-            var ball = document.getElementById("ball");
+                $(".c-menu").addClass('hidden');
+                $("#ball").removeClass('invisible');
+                $("#c-swimming-pool").removeClass('invisible');
+                StartCountdown();
+            }
+
+            vy = vy + -(init.ay);
+            vx = vx + -init.ax;
+
             y = parseInt(y + vy * vMultiplier);
             x = parseInt(x + vx * vMultiplier);
 
@@ -49,17 +50,16 @@ function init() {
                 y = 0;
                 vy = 0;
             }
-            if (x > window.innerWidth - 20) {
-                x = window.innerWidth - 20;
+            if (x > windowWidth - 79) {
+                x = windowWidth - 79;
                 vx = 0;
             }
-            if (y > window.innerHeight - 20) {
-                y = window.innerHeight - 20;
+            if (y > windowHeight - 63) {
+                y = windowHeight - 63;
                 vy = 0;
             }
-
-            ball.style.top = y + "px";
-            ball.style.left = x + "px";
+            eatFood(x, y);
+            ball.style.transform = "translate(" + x + "px," + y + "px)";
         }
     }, delay);
 }

@@ -1,52 +1,51 @@
 {% extends "base.html" %}
 
 {% block container-ball %}
-        <div id="ball"></div>
+    <div id="ball" class="invisible"></div>
+    <div id="c-swimming-pool" class="invisible"></div>
 {% endblock container-ball %}
 
 {% block content %}
     {% load staticfiles %}
 
-
-    <div class="e-burger-menu">X</div>
     <div class="c-menu">
-        <h1>{{ room.label }}</h1>
+        <h2>{{ room.label }}</h2>
         <div id="qrcode"></div>
 
         <p class="quiet">
             Anyone with this URL can join the room and chat:
             <code>{{ request.scheme }}://{{ request.get_host }}/{{ room.label }}</code>
         </p>
-        <p>
+        <p class="hidden">
             <label for="handle">Your name:</label>
             <input id="handle" type="text" placeholder="handle">
         </p>
     </div>
-    <form id="chatform">
+    <form id="chatform" style="display: none">
         <table id="chat">
             <tbody>
             <div id="e-scrolling-data-container">
-                {% for message in messages %}
-                    {#                    <td>{{ message.formatted_timestamp }}</td>#}
-                    <span>{{ message.handle }}</span>
-                    <span>{{ message.message }}</span>
-                    <br>
-                {% endfor %}
-            </div>
-
-{#            Second container for the 2nd player data#}
-
-{#            <div id="e-scrolling-data-container">#}
 {#                {% for message in messages %}#}
+{#                    <td>{{ message.formatted_timestamp }}</td>#}
 {#                    <span>{{ message.handle }}</span>#}
 {#                    <span>{{ message.message }}</span>#}
 {#                    <br>#}
 {#                {% endfor %}#}
-{#            </div>#}
+            </div>
+
+            {#            Second container for the 2nd player data#}
+
+            {#            <div id="e-scrolling-data-container">#}
+            {#                {% for message in messages %}#}
+            {#                    <span>{{ message.handle }}</span>#}
+            {#                    <span>{{ message.message }}</span>#}
+            {#                    <br>#}
+            {#                {% endfor %}#}
+            {#            </div>#}
 
             </tbody>
 
-            <tfoot>
+            <tfoot style="display: none;">
             <tr>
                 <td>Say something:</td>
                 <td colspan=2>
@@ -56,6 +55,32 @@
             </tfoot>
         </table>
     </form>
+
+    <div id="countdown"></div>
+
+    <div class="c-score-overlay">
+
+
+        <a href=http://www.queenfish.herokuapp.com"><i class="e-icon-replay material-icons">&#xE863;</i></a>
+
+        <div class="e-board">
+            <h2> Scoreboard</h2>
+            <ul>
+                <li>DanFish - 35</li>
+                <li>JackFish - 35</li>
+                <li>StoyanFish - 32</li>
+                <li>IulianFish - 33</li>
+                <li>AlexFish - 25</li>
+                <li id="e-personal-score">Your Score - 0</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="c-mobile-overlay hidden">
+        <span class="e-mobile-text">Your fish color is: </span>
+        <div class="e-fish-color"></div>
+    </div>
+    <div class="e-burger-menu">X</div>
 {% endblock content %}
 
 {% block afterbody %}
@@ -64,6 +89,8 @@
     <script type="text/javascript" src='{% static "js/jquery.qrcode.min.js" %}'></script>
     <script type="text/javascript" src='{% static "js/reconnecting-websocket.min.js" %}'></script>
     <script type="text/javascript" src='{% static "js/chat.js" %}'></script>
+    <script type="text/javascript" src='{% static "js/food-class.js" %}'></script>
+    <script type="text/javascript" src='{% static "js/countdown.js" %}'></script>
     <script>
         jQuery('#qrcode').qrcode({
             width: 164,
